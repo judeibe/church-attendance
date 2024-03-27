@@ -22,7 +22,7 @@ export const env = createEnv({
       process.env.VERCEL ? z.string() : z.string().url(),
     ),
     EMAIL_SERVER: z.string().optional(),
-    EMAIL_PORT: z.string().optional(),
+    EMAIL_PORT: z.coerce.number().optional(),
     EMAIL_FROM: z.string().optional(),
     EMAIL_USER: z.string().optional(),
     EMAIL_PASSWORD: z.string().optional(),
