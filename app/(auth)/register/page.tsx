@@ -1,5 +1,6 @@
-import { Fragment } from "react";
+import { Fragment, Suspense } from "react";
 
+import { SkeletonCard } from "@/components/skeleton-card";
 import { UserAuthForm } from "@/components/user-auth-form";
 
 export const metadata = {
@@ -13,7 +14,9 @@ export default function RegisterPage() {
       <p className="mb-4 text-clip text-sm">
         Enter your email to create your account
       </p>
-      <UserAuthForm />
+      <Suspense fallback={<SkeletonCard />}>
+        <UserAuthForm />
+      </Suspense>
     </Fragment>
   );
 }
