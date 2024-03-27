@@ -1,26 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `Meeting` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Saint` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `_MeetingToSaint` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropForeignKey
-ALTER TABLE "_MeetingToSaint" DROP CONSTRAINT "_MeetingToSaint_A_fkey";
-
--- DropForeignKey
-ALTER TABLE "_MeetingToSaint" DROP CONSTRAINT "_MeetingToSaint_B_fkey";
-
--- DropTable
-DROP TABLE "Meeting";
-
--- DropTable
-DROP TABLE "Saint";
-
--- DropTable
-DROP TABLE "_MeetingToSaint";
-
 -- CreateTable
 CREATE TABLE "Account" (
     "id" TEXT NOT NULL,
