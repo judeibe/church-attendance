@@ -1,7 +1,8 @@
-import { Fragment } from "react";
+import { Fragment, Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { SkeletonCard } from "@/components/skeleton-card";
 import { UserAuthForm } from "@/components/user-auth-form";
 
 export const metadata: Metadata = {
@@ -9,13 +10,15 @@ export const metadata: Metadata = {
   description: "Login to your account",
 };
 
-export default function LoginPage() {
+export default async function LoginPage() {
   return (
     <Fragment>
       <p className="mb-4 text-clip text-sm">
         Enter your email to sign in to your account
       </p>
-      <UserAuthForm className="mb-2" />
+      <Suspense fallback={<SkeletonCard />}>
+        <UserAuthForm className="mb-2" />
+      </Suspense>
       <p className="px-8 text-center text-sm text-muted-foreground">
         <Link
           href="/register"
