@@ -6,9 +6,8 @@ import GoogleProvider from "next-auth/providers/google";
 import { Resend } from "resend";
 
 import { env } from "@/env";
+import { EmailActivationTemplate } from "@/lib/email_templates/email_activation";
 import { prisma } from "@/lib/prisma";
-
-import { html, text } from "./email_templates/sign_in";
 
 const resend = new Resend(env.EMAIL_PASSWORD);
 
@@ -42,6 +41,7 @@ export const authOptions = {
           where: { email: identifier },
           select: {
             emailVerified: true,
+            name: true,
           },
         });
 
@@ -50,8 +50,7 @@ export const authOptions = {
             from: provider.from,
             to: identifier,
             subject: `Sign in to ${host}`,
-            text: text({ url, host }),
-            html: html({ url, host, theme }),
+            react: EmailActivationTemplate({ url, host, name: user.name }),
             headers: {
               // Set this to prevent Gmail from threading emails.
               // See https://stackoverflow.com/questions/23434110/force-emails-not-to-be-grouped-into-conversations/25435722.
