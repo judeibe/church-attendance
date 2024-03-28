@@ -1,6 +1,8 @@
 import type { PropsWithChildren } from "react";
 import Image from "next/image";
 
+import logo from "../../public/logo/church_in_bolingbrook.png";
+
 export default function AuthLayout({ children }: PropsWithChildren) {
   return (
     <div className="min-h-screen">
@@ -8,8 +10,8 @@ export default function AuthLayout({ children }: PropsWithChildren) {
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="mb-2 flex flex-col text-center">
             <Image
-              src="/logo/church_in_bolingbrook.png"
-              alt="Logo"
+              src={logo}
+              alt="Pictography of the words The chuch in Bolingbrook logo"
               width={592}
               height={171}
               className="mx-auto"
