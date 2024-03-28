@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    POSTGRES_URL: z.string().url(),
+    POSTGRES_PRISMA_URL: z.string().url(),
     POSTGRES_URL_NON_POOLING: z.string().url().optional(),
     GOOGLE_CLIENT_ID: z.string(),
     GOOGLE_CLIENT_SECRET: z.string(),
