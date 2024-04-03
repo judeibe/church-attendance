@@ -35,7 +35,7 @@ export const authOptions = {
         },
       },
       from: env.EMAIL_FROM,
-      sendVerificationRequest: async ({ identifier, url, provider, theme }) => {
+      sendVerificationRequest: async ({ identifier, url, provider }) => {
         const { host } = new URL(url);
         const user = await prisma.user.findUnique({
           where: { email: identifier },
