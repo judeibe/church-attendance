@@ -13,8 +13,7 @@ import { userAuthSchema } from "@/lib/validations/auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
-
-import { Icons } from "./icons";
+import { Icons } from "@/components/icons";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 

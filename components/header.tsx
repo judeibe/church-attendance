@@ -1,31 +1,19 @@
-import Link from "next/link";
-import {
-  Home,
-  LineChart,
-  Menu,
-  Package,
-  Package2,
-  Search,
-  ShoppingCart,
-  Users,
-} from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import type { User } from "next-auth";
 
 import { dashboardConfig } from "@/config/dashboard";
-
-import { SideNav } from "./side-nav";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Input } from "./ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { UserAccountNav } from "./user-account-nav";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { SideNav } from "@/components/side-nav";
+import { UserAccountNav } from "@/components/user-account-nav";
 
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   user: Pick<User, "name" | "image">;

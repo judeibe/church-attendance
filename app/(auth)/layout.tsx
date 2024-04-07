@@ -1,7 +1,6 @@
 import type { PropsWithChildren } from "react";
 import Image from "next/image";
-
-import logo from "../../public/logo/church_in_bolingbrook.png";
+import logo from "public/logo/church_in_bolingbrook.png";
 
 export default function AuthLayout({ children }: PropsWithChildren) {
   return (

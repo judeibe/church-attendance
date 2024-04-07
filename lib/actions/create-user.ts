@@ -1,6 +1,6 @@
 "use server";
 
-import { userAuthSchema } from "../validations/auth";
+import { userAuthSchema } from "@/lib/validations/auth";
 
 export async function createUser(prevState: any, formData: FormData) {
   const validatedFields = userAuthSchema.safeParse({

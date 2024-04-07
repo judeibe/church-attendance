@@ -12,6 +12,12 @@ module.exports = {
     "react/jsx-key": "off",
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        patterns: [".*"],
+      },
+    ],
   },
   globals: {
     React: true,
