@@ -8,7 +8,7 @@ interface UserAvatarProps extends AvatarProps {
   user: Pick<User, "image" | "name">;
 }
 
-export async function UserAvatar({ user, ...props }: UserAvatarProps) {
+export function UserAvatar({ user, ...props }: UserAvatarProps) {
   return (
     <Avatar {...props}>
       {user.image ? (
