@@ -1,19 +1,14 @@
-import { redirect } from "next/navigation";
-
-import { authOptions } from "@/lib/auth";
-import { getCurrentUser } from "@/lib/session";
+import { Fragment } from "react";
 
 export default async function DashboardPage() {
-  const user = await getCurrentUser();
-
-  if (!user) {
-    redirect(authOptions.pages.signIn);
-  }
-
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome, {user?.name}!</p>
-    </div>
+    <Fragment>
+      <div className="flex items-center">
+        <h1 className="text-lg font-semibold md:text-2xl">Meetings</h1>
+      </div>
+      <div className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm">
+        <div className="flex flex-col items-center gap-1 text-center"></div>
+      </div>
+    </Fragment>
   );
 }
