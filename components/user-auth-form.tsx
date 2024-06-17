@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useSearchParams } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Label } from "@radix-ui/react-label";
 import { signIn } from "next-auth/react";
@@ -29,7 +28,6 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   });
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isGoogleLoading, setIsGoogleLoading] = React.useState<boolean>(false);
-  const searchParams = useSearchParams();
 
   async function onSubmit(data: FormData) {
     setIsLoading(true);
@@ -37,7 +35,6 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
       redirect: false,
-      callbackUrl: searchParams?.get("from") || "/",
     });
 
     setIsLoading(false);

@@ -10,7 +10,7 @@ export default function AuthLayout({ children }: PropsWithChildren) {
           <div className="mb-2 flex flex-col text-center">
             <Image
               src={logo}
-              alt="Pictography of the words The chuch in Bolingbrook logo"
+              alt="Pictography of the words The church in Lemont logo"
               width={592}
               height={171}
               className="mx-auto"
