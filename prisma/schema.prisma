@@ -63,3 +63,21 @@ model VerificationToken {
     @@unique([identifier, token])
     @@map(name: "verification_tokens")
 }
+
+model Person {
+    id        String   @id @default(cuid())
+    firstName String
+    middleName String?
+    lastName  String
+    email     String?
+    age       Age
+    createdAt DateTime @default(now()) @map(name: "created_at")
+    updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+    @@map(name: "people")
+}
+
+enum Age {
+    ADULT
+    CHILD
+}

@@ -1,20 +1,13 @@
 import { Fragment } from "react";
 
+import { getPeople } from "@/lib/data/people";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { List } from "@/components/list";
 import { PeopleListItem } from "@/components/people-list-item";
 
-// List of 50 people
-const people: { fullName: string; age: "adult" | "child" }[] = Array.from(
-  { length: 50 },
-  (_, i) => ({
-    fullName: `Person ${i + 1}`,
-    age: i % 2 === 0 ? "adult" : "child",
-  }),
-);
-
 export default async function PeoplePage() {
+  const people = await getPeople();
   return (
     <Fragment>
       <div className="flex items-center justify-between">
