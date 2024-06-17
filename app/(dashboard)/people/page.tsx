@@ -22,7 +22,7 @@ export default async function PeoplePage() {
       <div className="flex flex-1 rounded-lg border border-dashed shadow-sm">
         <List>
           {people.map((person) => (
-            <PeopleListItem fullName={person.fullName} age={person.age} />
+            <PeopleListItem fullName={person.firstName} age={person.age} />
           ))}
         </List>
       </div>
