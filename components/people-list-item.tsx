@@ -1,8 +1,10 @@
+import type { Person } from "@prisma/client";
+
 import { cn } from "@/lib/utils";
 
 interface PersonListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   fullName: string;
-  age: "adult" | "child";
+  age: Person["age"];
 }
 
 export function PeopleListItem({
