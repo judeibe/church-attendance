@@ -4,11 +4,11 @@ This directory contains the core documentation files that preserve project conte
 
 ## Static Site Focus
 
-This project is a static AI marketplace. There is no backend, server-side logic, database, or authentication. All features are implemented client-side or as static assets.
+This project is a static church attendance tracking system. There is no backend, server-side logic, database, or authentication. All features are implemented client-side or as static assets.
 
 ## Structure
 
-- `projectbrief.md`: Core project requirements and goals
+- `projectBrief.md`: Core project requirements and goals
 - `productContext.md`: Product context and user experience goals
 - `activeContext.md`: Current work focus and recent changes
 - `systemPatterns.md`: System architecture and design patterns
