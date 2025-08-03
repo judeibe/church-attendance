@@ -35,7 +35,7 @@ export function AuthCard() {
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl text-center">
+        <CardTitle as="h2" className="text-2xl text-center">
           {mode === 'login' ? 'Sign In' : 'Create Account'}
         </CardTitle>
         <p className="text-sm text-gray-600 text-center">

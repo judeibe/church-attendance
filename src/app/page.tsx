@@ -2,7 +2,7 @@ import { AuthCard } from "@/components/auth/auth-card"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <main className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="w-full max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Hero Section */}
@@ -45,6 +45,6 @@ export default function Home() {
           <p>&copy; 2024 Church Attendance Tracker. Built for church communities.</p>
         </footer>
       </div>
-    </div>
+    </main>
   )
 }
